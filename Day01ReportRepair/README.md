@@ -85,7 +85,7 @@ static int ReportRepair(int year, string path)
 
 ## Link to Code
 
-<./Program.cs>
+[Day01ReportRepair](./Day01ReportRepair/Program.cs)
 
 ---
 
