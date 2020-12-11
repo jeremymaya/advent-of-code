@@ -1,4 +1,4 @@
-# Day 01: Report Repair
+# Day 03 Toboggan Trajectory
 
 [Advent of Code - Day 3: Toboggan Trajectory](https://adventofcode.com/2020/day/3)
 
@@ -72,22 +72,43 @@ Starting at the top-left corner of your map and following a slope of right 3 and
 
 ## Approach
 
+1. Import the text file containing trees
+2. Going a line by line, check if there is a tree at current position
+3. Each time we go to the next line, increment the position by 3 then modulo 32 to get the current position
+4. Return the tree count
+
 ---
 
 ## Efficiency
 
 |  | Time | Space |
 |:-|:-|:-|
-|  |  |  |
+| TobogganTrajectory() | O(n) | O(1) |
 
-* Time Complexity:
-* Space Complexity:
+* Time Complexity: O(n)
+* Space Complexity: O(1)
 
 ---
 
 ## Solution
 
 ```c#
+static int TobogganTrajectory(string path)
+{
+    int trees = 0;
+    int position = 0;
+
+    using var sr = new StreamReader(path);
+    while (!sr.EndOfStream)
+    {
+        if (sr.ReadLine()[position] == '#')
+            trees++;
+
+        position = (position + 3) % 31;
+    }
+
+    return trees;
+}
 ```
 
 ---
