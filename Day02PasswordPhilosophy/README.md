@@ -1,4 +1,4 @@
-# Day 01: Report Repair
+# Day 2: Password Philosophy
 
 [Advent of Code - Day 2: Password Philosophy](https://adventofcode.com/2020/day/2)
 
